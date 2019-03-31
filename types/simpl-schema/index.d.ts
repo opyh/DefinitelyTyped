@@ -14,7 +14,7 @@ export interface ValidationContext extends SimpleSchemaValidationContextStatic {
     validationErrors(): any;
 }
 
-interface CustomValidationContext {
+export interface CustomValidationContext {
     /** The name of the schema key (e.g., "addresses.0.street") */
     key: string;
 
@@ -56,7 +56,7 @@ interface CustomValidationContext {
     addValidationErrors(errors: SimpleSchemaValidationError): any;
 }
 
-interface SchemaDefinition {
+export interface SchemaDefinition {
     type: any;
     label?: string | (() => string);
     optional?: boolean | (() => boolean);
@@ -81,7 +81,7 @@ interface SchemaDefinition {
     trim?: boolean;
 }
 
-interface CleanOption {
+export interface CleanOption {
     filter?: boolean;
     autoConvert?: boolean;
     removeEmptyStrings?: boolean;
@@ -92,7 +92,7 @@ interface CleanOption {
     removeNullsFromArrays?: boolean;
 }
 
-interface SimpleSchemaOptions {
+export interface SimpleSchemaOptions {
   check?: boolean;
   clean?: CleanOption;
   defaultLabel?: string;
@@ -101,7 +101,7 @@ interface SimpleSchemaOptions {
   tracker?: any;
 }
 
-interface SimpleSchemaValidationError {
+export interface SimpleSchemaValidationError {
   type: string;
   [key: string]: number | string;
 }
