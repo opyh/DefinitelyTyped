@@ -159,7 +159,7 @@ declare module "meteor/mongo" {
                 fields?: FieldSpecifier;
                 reactive?: boolean;
                 transform?: Function | null;
-            }): T;
+            }): T | undefined;
             insert(doc: T, callback?: Function): string;
             rawCollection(): any;
             rawDatabase(): any;
